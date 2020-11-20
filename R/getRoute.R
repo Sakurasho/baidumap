@@ -36,7 +36,7 @@ getRouteXML = function(origin, destination, mode='driving',
   ## get xml data
   serverAddress = 'http://api.map.baidu.com/directionlite/v1/driving?'
   rawData = getForm(serverAddress, 
-                    origin = "31.216326,121.479177", destination = "31.238521,121.482195", 
+                    origin = origin, destination = destination, 
                     # origin_region = origin_region, 
                     # destination_region = destination_region,
                     #tactics = tactics, coord_type = coord_type, ret_coordtype = ret_coordtype,
