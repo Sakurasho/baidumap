@@ -17,7 +17,7 @@ getRouteXML = function(origin, destination, mode='driving',
                        map_ak=''){
   
   if (map_ak == '' && is.null(getOption('baidumap.key'))){
-    stop("Notification")
+    stop(Notification)
   }else{
     map_ak = ifelse(map_ak == '', getOption('baidumap.key'), map_ak)
   }
@@ -39,8 +39,8 @@ getRouteXML = function(origin, destination, mode='driving',
                     origin = origin, destination = destination, 
                     # origin_region = origin_region, 
                     # destination_region = destination_region,
-                    #tactics = tactics, coord_type = coord_type, ret_coordtype = ret_coordtype,
-                    ak = map_ak, output = output)
+                    tactics = tactics, coord_type = coord_type, ret_coordtype = ret_coordtype,
+                    ak = map_ak)
   return(rawData)
 }
 
